@@ -125,7 +125,7 @@ function draw() {
     pipe[i].x -= speed;
 
 // Частота спавна блоков
-    if(pipe[i].x == 245 || pipe[i].x == 246) {
+    if(pipe[i].x == 154 || pipe[i].x == 155) {
 // Позиция блоков
     pipe.push({
     x : cvs.width,
@@ -199,8 +199,6 @@ function draw() {
     }
 
 // Блок анимарования
-//    requestAnimationFrame(draw);
-//    requestAnimationFrame(setTimeout(draw, 10));
     setTimeout(draw, 8);
 }
 // Запуск функции после загрузки background
