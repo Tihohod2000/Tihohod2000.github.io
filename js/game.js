@@ -201,7 +201,7 @@ function draw() {
 // Блок анимарования
 //    requestAnimationFrame(draw);
 //    requestAnimationFrame(setTimeout(draw, 10));
-    setTimeout(draw, 3000);
+    setTimeout(draw, 9);
 }
 // Запуск функции после загрузки background
 bg.onload = draw;
