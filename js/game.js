@@ -50,7 +50,7 @@ var yPos = 70;
 var grav = 2;
 
 //Скорость
-var speed = 3;
+var speed = 2;
 
 // Счёт
 var ball = 0;
@@ -64,11 +64,11 @@ var  theEnd = 0
 // Функции полёта
 function moveUp(){
     fly.play();
-    grav -= 13;
+    grav -= 11;
 }
 
 function moveDown(){
-    grav += 5;
+    grav += 3;
 }
 
 // При нажатие на копку
