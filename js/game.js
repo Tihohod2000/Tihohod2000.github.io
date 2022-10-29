@@ -203,5 +203,3 @@ function draw() {
 }
 // Запуск функции после загрузки background
 bg.onload = draw;
-
-
