@@ -55,7 +55,7 @@ var speed = 2;
 // Счёт
 var ball = 0;
 
-// Километров в час
+// Километров в час 
 var speed_car = 40;
 
 //Переменная проигрыша
@@ -64,7 +64,7 @@ var  theEnd = 0
 // Функции полёта
 function moveUp(){
     fly.play();
-    grav -= 11;
+    grav -= 12;
 }
 
 function moveDown(){
@@ -125,7 +125,7 @@ function draw() {
     pipe[i].x -= speed;
 
 // Частота спавна блоков
-    if(pipe[i].x == 235 || pipe[i].x == 236) {
+    if(pipe[i].x == 245 || pipe[i].x == 246) {
 // Позиция блоков
     pipe.push({
     x : cvs.width,
@@ -182,8 +182,8 @@ function draw() {
     if(grav > 8){
     grav = 8
     }
-    if(grav < -13){
-    grav = -13
+    if(grav < -11){
+    grav = -11
     }
 
 //Созранение лучшего рузельтата в локальную пямать
@@ -201,7 +201,7 @@ function draw() {
 // Блок анимарования
 //    requestAnimationFrame(draw);
 //    requestAnimationFrame(setTimeout(draw, 10));
-    setTimeout(draw, 15);
+    setTimeout(draw, 8);
 }
 // Запуск функции после загрузки background
 bg.onload = draw;
