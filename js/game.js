@@ -40,7 +40,7 @@ othcive.src = "music/othcive.mp3";
 
 
 //Расстояние между препятствиями
-var gap = 120
+var gap = 125
 
 // Позиция птички
 var xPos = 40;
@@ -201,7 +201,7 @@ function draw() {
 // Блок анимарования
 //    requestAnimationFrame(draw);
 //    requestAnimationFrame(setTimeout(draw, 10));
-    setTimeout(draw, 8);
+    setTimeout(draw, 15);
 }
 // Запуск функции после загрузки background
 bg.onload = draw;
