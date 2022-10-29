@@ -40,7 +40,7 @@ othcive.src = "music/othcive.mp3";
 
 
 //Расстояние между препятствиями
-var gap = 120
+var gap = 125
 
 // Позиция птички
 var xPos = 40;
@@ -50,7 +50,7 @@ var yPos = 70;
 var grav = 2;
 
 //Скорость
-var speed = 3;
+var speed = 2;
 
 // Счёт
 var ball = 0;
@@ -64,11 +64,11 @@ var  theEnd = 0
 // Функции полёта
 function moveUp(){
     fly.play();
-    grav -= 13;
+    grav -= 11;
 }
 
 function moveDown(){
-    grav += 5;
+    grav += 3;
 }
 
 // При нажатие на копку
@@ -201,7 +201,7 @@ function draw() {
 // Блок анимарования
 //    requestAnimationFrame(draw);
 //    requestAnimationFrame(setTimeout(draw, 10));
-    setTimeout(draw, 8);
+    setTimeout(draw, 15);
 }
 // Запуск функции после загрузки background
 bg.onload = draw;
