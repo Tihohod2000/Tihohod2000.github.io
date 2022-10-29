@@ -1,1 +1,2 @@
-launch with clear cashe
+## Run
+> 1. Launch with clear cashe
