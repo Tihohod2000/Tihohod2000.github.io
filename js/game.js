@@ -8,8 +8,11 @@ var pipeBottom = new Image();
 var bg = new Image();
 bird.src = "image/bird3.png";
 bg.src = "image/bg.png";
+//pipeBottom.src = "image/pipeBottom.png";
+//pipeUp.src = "image/pipeUP.png";
+
 pipeBottom.src = "image/pipeBottom.png";
-pipeUp.src = "image/pipeUP.png";
+pipeUp.src = "image/pipeBottom.png";
 
 
 // Переменные взрыва
