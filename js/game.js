@@ -83,17 +83,11 @@ document.onkeypress = function(event){
     }
 }
 
-function sayThanks() {
-    moveUp();
-    bgMusic.play();
-}
 
 onclick = function (event) {
     moveUp();
     bgMusic.play()
 }
-
-
 
 
 // Звук взрыва
