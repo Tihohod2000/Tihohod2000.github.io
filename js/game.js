@@ -74,7 +74,7 @@ function moveDown(){
 // При нажатие на копку
 document.onkeypress = function(event){
 //    console.log(event);
-    if(event.code == "KeyW"){
+    if (event.code == "KeyW" || event.which == 1){
     moveUp();
     bgMusic.play();
     }
@@ -82,6 +82,20 @@ document.onkeypress = function(event){
     moveDown();
     }
 }
+
+function sayThanks() {
+    moveUp();
+    bgMusic.play();
+}
+
+onclick = function (event) {
+    moveUp();
+    bgMusic.play()
+
+};
+
+
+
 
 // Звук взрыва
 function bomba() {
