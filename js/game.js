@@ -91,8 +91,7 @@ function sayThanks() {
 onclick = function (event) {
     moveUp();
     bgMusic.play()
-
-};
+}
 
 
 
