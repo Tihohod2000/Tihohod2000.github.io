@@ -72,8 +72,6 @@ var speed_car = 30;
 var theEnd = 0;
 
 
-
-
 // Функции полёта
 function moveUp() {
     fly.play();
