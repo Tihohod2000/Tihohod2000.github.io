@@ -73,14 +73,14 @@ var theEnd = 0;
 
 
 // Функции полёта
-function moveUp() {
+setTimeout(function moveUp() {
     fly.play();
     grav -= 12;
-}
+}, 20)
 
-function moveDown() {
+setTimeout(function moveDown() {
     grav += 3;
-}
+}, 20)
 
 // При нажатие на копку
 document.onkeypress = function (event) {
@@ -97,7 +97,7 @@ document.onkeypress = function (event) {
 //При нажатии на мышь
 onclick = function (event) {
     moveUp();
-    bgMusic.play()
+    //bgMusic.play()
 }
 
 
@@ -109,17 +109,17 @@ function bomba() {
 }
 
 // Анимация взрыва
-function boomz() {
+setTimeout(function boomz() {
     ctx.drawImage(boom, xPos - 20, yPos - 20);
-}
+}, 20)
 
-function boomz2() {
+setTimeout(function boomz2() {
     ctx.drawImage(boom2, xPos - 10, yPos - 20);
-}
+}, 20)
 
-function boomz3() {
+setTimeout(function boomz3() {
     ctx.drawImage(boom3, xPos - 15, yPos - 23);
-}
+}, 20)
 
 
 // Массив создания блоков
@@ -131,7 +131,7 @@ pipe[0] = {
 
 
 function draw() {
-    //    bgMusic.play();
+    bgMusic.play();
     if (theEnd != 0) {
         return
     }
