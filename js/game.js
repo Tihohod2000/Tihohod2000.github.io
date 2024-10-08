@@ -85,14 +85,14 @@ function moveDown() {
 }
 
 // При нажатие на копку
-document.onkeypress = async function (event) {
+document.onkeypress = function (event) {
     //    console.log(event);
     if (event.code == "KeyW") {
-        await moveUp();
-        await bgMusic.play();
+        moveUp();
+        bgMusic.play();
     }
     if (event.code == "KeyS") {
-        await moveDown();
+        moveDown();
     }
 }
 
@@ -132,7 +132,7 @@ pipe[0] = {
 }
 
 
-async function draw() {
+function draw() {
     //    bgMusic.play();
 
     ctx.drawImage(bg, 0, 0, 800, 450);
