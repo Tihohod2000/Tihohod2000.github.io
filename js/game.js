@@ -72,6 +72,8 @@ var speed_car = 30;
 var theEnd = 0;
 
 
+
+
 // Функции полёта
 function moveUp() {
     fly.play();
@@ -83,14 +85,14 @@ function moveDown() {
 }
 
 // При нажатие на копку
-document.onkeypress = function (event) {
+document.onkeypress = async function (event) {
     //    console.log(event);
     if (event.code == "KeyW") {
-        moveUp();
-        bgMusic.play();
+        await moveUp();
+        await bgMusic.play();
     }
     if (event.code == "KeyS") {
-        moveDown();
+        await moveDown();
     }
 }
 
@@ -130,11 +132,9 @@ pipe[0] = {
 }
 
 
-function draw() {
+async function draw() {
     //    bgMusic.play();
-    if (theEnd != 0) {
-        return
-    }
+
     ctx.drawImage(bg, 0, 0, 800, 450);
     ctx.drawImage(bird, xPos, yPos);
 
@@ -159,12 +159,15 @@ function draw() {
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height || yPos + bird.height >= pipe[i].y + pipeUp.height + gap)
             || (yPos + bird.height * 1.5 <= 0) || (yPos - bird.height >= cvs.height)) {
-            bomba();
-            boomz();
-            setTimeout(boomz2, 90);
-            setTimeout(boomz3, 180);
-            setTimeout(end, 350);
-            theEnd = 1;
+                theEnd = 1;
+                
+
+                bomba();
+                boomz();
+                setTimeout(boomz2, 90);
+                setTimeout(boomz3, 180);
+                setTimeout(end(ball, top), 350);
+            
         }
 
 
@@ -223,15 +226,26 @@ function draw() {
     }
 
     //Созранение лучшего рузельтата в локальную пямать
-    var top = localStorage.getItem('top');
-    top = JSON.parse(top);
-    if (top < ball) {
-        localStorage.setItem('top', ball);
-    }
+    // var top = localStorage.getItem('top');
+    // top = JSON.parse(top);
+    // if (top < ball) {
+    //     localStorage.setItem('top', ball);
+    // }
     //Функция конца игры
-    function end() {
+    function end(ball, top) {
+        // Запись лучшего результата 
+        var top = localStorage.getItem('top');
+        top = JSON.parse(top);
+        if (top <= ball) {
+            localStorage.setItem('top', ball);
+        }
         alert("Ты проиграл! Твой счёт ==> " + ball + "  Лучший результат ==> " + top);
         location.reload();
+    }
+
+    
+    if (theEnd != 0) {
+        return
     }
 
     // Блок анимарования
